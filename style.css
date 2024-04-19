@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    height: 3000px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #036;
+}
+
+header > img {
+    width: 20%;
+    padding: 10px;
+}
+
+.carousel > img{
+    width: 100%;
+}
+
+.dropdown {
+    float: right;
+} 
+
+.dropdown {
+    height: auto;
+    width: 20%;
+    text-align: center;
+    padding-left: 10px;
+
+}
+
+.dropdown > p {
+    border-radius: 15px;
+    background-color: rgba(56, 91, 126, 0.74);
+    padding: 10px;
+
+    color: white;
+    font-size: 24px;
+}
