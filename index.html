@@ -5,60 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHSBC</title>
     <link href="style.css" rel="stylesheet">
+    <link href="dropdown.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 </head>
 <body>
 
-    <div id="topbar" class="hoc clear"> 
-        <!-- ################################################################################################ -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        $('#menu-button-box').click(function(){
+            $(this).toggleClass('open');
+            $('.menu-box').toggleClass('open-box');
+        });
+    });
+  </script>
+
+    <div id="topbar" class="hoc clear">
+
         <div class="fl_left">
-          <ul class="nospace inline pushright">
-            <li><i class="fa fa-phone"></i> (0472) 64-10-00</li>
-            <li><i class="fa fa-envelope-o"></i> public@csbc.edu.ua</li>
-          </ul>
-        </div>
-        <div class="fl_right">
-          <ul class="faico clear">
-            <li><a class="faicon-facebook" href="https://www.facebook.com/CHSBC2013/?__xts__[0]=68.ARAU78r73EGaniXz2WGXYFygYK0sBto-YDhFTbSguCTJf-AUXlaZv7ehQt48_MPzFwbXFIVVhX14A86fW0FEaK_23tgWt2HW7ir8_jbO8ZiyS-QLpIq-N0h3bHh7A83GRQw1wp3yakKmFT1mcZTnNZRxSUdZv_HNsoKCzbTZlSILUZc6alKkmWV5Lynz08-EAJ6v5J-iL_RFHD2jK1altnYMZ9yWJ7sPGhcIwAVZVEqHfS-b4NLYt-HFBG9n5eTtQjXFLkHZxK9rf9Qf2ghJFfsrUGoUIMk5h8WE0iVy3_Gvv6VmAv180QfyV1MuFYCTf1C7AwyPQ6tps8dq0ZO00tFeyS4G-0Lmocz7pfXnVzzkcfKx6PMZTcCt7iEAD_NKpcWrBdrN7rxovNj0l2OfCha6bC5_rnfrnBFIhR81KbacWw" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a class="faicon-pinterest" href="https://www.instagram.com/stud.chsbc/?hl=ru&amp;fbclid=IwAR3j7BrE6kvzGL7w4vCkjjTwpSDA5JC_dVN5_9lqavZtH4V2fVlMEzjp20A" target="_blank"><i class="fa fa-instagram"></i></a></li>
-            <!--<li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
-            <li><a class="faicon-dribble" href="https://www.youtube.com/channel/UCEpgZ7OwaEQdM5toM-AR7PA" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
-            <li><a class="faicon-linkedin" href="mailto:public@csbc.edu.ua"><i class="fa fa-envelope"></i></a></li>
-            <li><a class="faicon-linkedin" href="https://analytics.google.com/analytics/web/?hl=ru&amp;pli=1#embed/report-home/a84784907w126796913p130426676/" target="_blank"><i class="fa fa-bar-chart"></i></a></li>
-             <li> <form id="custom-search-form" class="form-search form-horizontal pull-right">
-                    <div class="input-append span12">
-                        <input type="text" class="search-query mac-style" placeholder="Пошук...">
-                        <button type="submit" class="btn"><i class="fa fa-search"></i></button>
-                    </div>
-                </form></li>
-            <li><form action="lang.php" method="POST" id="myform">
-                    
-                        <input type="hidden" name="lang" value="ua">
-                        <img src="../images/ukr.png" border="0" style="width:30px; margin:3px 10px 0 5px; cursor:pointer" onclick="document.getElementById('myform').submit(); return false;"> 
-                     
-                </form> </li>	
-            <li><form action="lang.php" method="POST" id="myform1">
-                    
-                        <input type="hidden" name="lang" value="en">
-                        <img src="../images/en.png" border="0" style="width:30px; margin:3px 10px 0 5px; cursor:pointer" onclick="document.getElementById('myform1').submit(); return false;"> 
-                     
-                </form> </li>	
-          </ul>
-         
-        </div>
-        <!-- ################################################################################################ -->
-      </div>
+            <!-- <li><i class="fa fa-phone"></i> (0472) 64-10-00</li>
+            <li><i class="fa fa-envelope-o"></i> public@csbc.edu.ua</li> -->
+              
+            <div class="langs">
+              <li>    
+                <img src="https://static-00.iconduck.com/assets.00/ukraine-emoji-2048x1480-8tcegxxe.png" style="width:30px; margin:3px 10px 0 5px; cursor:pointer">     
+              </li>	
+              <li>
+                <img src="https://flagpedia.net/data/flags/emoji/twitter/256x256/gb.png" style="width:30px; margin:3px 10px 0 5px; cursor:pointer"> 
+              </li>	
+            </div>
 
-    <header>
-        <img src="http://csbc.edu.ua/images/page/logo.png">
+            <div class="search-box">
+              <button class="btn-search"><i class="fa fa-search"></i></button>
+              <input type="text" class="input-search" placeholder="Пошук...">
+            </div>
 
-        <div class="dropdown">
-            <!-- <div class="dropdown-link"> -->
-                <p>Меню</p>
-            <!-- </div>  -->
         </div>
 
-    </header>
+
+        <img class="logo" src="http://csbc.edu.ua/images/page/logo.png">
+   
+          <div class="dropdown">
+
+            <div id="menu-button-box">
+              <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+
+               <div class="menu-box">
+                 <div class="menu-sign"><p>Меню</p></div>
+                 <div class="moodle-link"><a href="#">СДН moodle</a></div>
+                 <div class="about-link"><a href="#">Про нас</a></div>
+                 <div class="fornewcomers-link"><a href="donation.html">Абітурієнтові</a></div>
+                 <div class="students-link"><a href="server-spec.html">Студентові</a></div>
+                 <div class="socials">
+                     <li><a class="faicon-facebook" href="https://www.facebook.com/CHSBC2013/?__xts__[0]=68.ARAU78r73EGaniXz2WGXYFygYK0sBto-YDhFTbSguCTJf-AUXlaZv7ehQt48_MPzFwbXFIVVhX14A86fW0FEaK_23tgWt2HW7ir8_jbO8ZiyS-QLpIq-N0h3bHh7A83GRQw1wp3yakKmFT1mcZTnNZRxSUdZv_HNsoKCzbTZlSILUZc6alKkmWV5Lynz08-EAJ6v5J-iL_RFHD2jK1altnYMZ9yWJ7sPGhcIwAVZVEqHfS-b4NLYt-HFBG9n5eTtQjXFLkHZxK9rf9Qf2ghJFfsrUGoUIMk5h8WE0iVy3_Gvv6VmAv180QfyV1MuFYCTf1C7AwyPQ6tps8dq0ZO00tFeyS4G-0Lmocz7pfXnVzzkcfKx6PMZTcCt7iEAD_NKpcWrBdrN7rxovNj0l2OfCha6bC5_rnfrnBFIhR81KbacWw" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                     <li><a class="faicon-pinterest" href="https://www.instagram.com/stud.chsbc/?hl=ru&amp;fbclid=IwAR3j7BrE6kvzGL7w4vCkjjTwpSDA5JC_dVN5_9lqavZtH4V2fVlMEzjp20A" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                     <li><a class="faicon-dribble" href="https://www.youtube.com/channel/UCEpgZ7OwaEQdM5toM-AR7PA" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                     <li><a class="faicon-linkedin" href="mailto:public@csbc.edu.ua"><i class="fa fa-envelope"></i></a></li>
+                     <li><a class="faicon-linkedin" href="https://analytics.google.com/analytics/web/?hl=ru&amp;pli=1#embed/report-home/a84784907w126796913p130426676/" target="_blank"><i class="fa fa-bar-chart"></i></a></li>
+                  </div>
+               </div>
+          </div>
+          
+    </div>
 
     <div class="wrapper">
 
@@ -75,7 +87,8 @@
       
         </div>
       
-      </div>
-      <script src="script.js"></script>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
