@@ -1,0 +1,18 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+}
+
+.row {
+    text-align: center;
+    width: 80%;
+}
+
+.force-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}

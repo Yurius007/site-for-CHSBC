@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    height: 3000px;
 }
 
 #topbar {
@@ -225,7 +224,7 @@ header {
 
 .news {
   padding-left: 15px;
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -233,9 +232,13 @@ header {
 
 .news1 , .news2 {
   display: flex;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 10px;
+  margin-top: 10px;
 }
 
 .news1-img , .news2-img {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   height: 300px;
   width: 250px;
 }
@@ -248,4 +251,79 @@ header {
 
 h4 {
   font-size: 24px;
+}
+
+/*////////////////////////////*/
+
+.event-calendar {
+  padding-left: 15px;
+  /* width: 45%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.calendar-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  background-color: azure;
+}
+
+.event-calendar1 , .event-calendar2 , .event-calendar3 , .event-calendar4 {
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+  padding: 10px;
+  margin: 10px;
+  flex-direction: column;
+}
+
+.event-calendar1-img , .event-calendar2-img , .event-calendar3-img , .event-calendar4-img {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 300px;
+  width: 250px;
+}
+
+.event-calendar1-text , .event-calendar2-text , .event-calendar3-text , .event-calendar4-text {
+  display: flex;
+  padding: 15px;
+  justify-content: space-around;
+  flex-direction: row;
+
+}
+
+h4 {
+  font-size: 24px;
+}
+
+.events-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+footer {
+  margin-top: 50px;
+  width: 100%;
+  background-color: #333;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #d4d4d4;
+  align-items: center;
+}
+
+/* ul {
+  list-style: none;
+} */
+
+.linklist > li {
+  list-style: none;
+  
+}
+.linklist > li > a {
+  text-decoration: none;
+  color: #7aafff;
 }
