@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHSBC</title>
+    <link type="text/css" href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+    <link type="text/css" href="{{ url_for('static', filename='css/dropdown.css')}}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+</head>
+<body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        $('#menu-button-box').click(function(){
+            $(this).toggleClass('open');
+            $('.menu-box').toggleClass('open-box');
+        });
+    });
+  </script>
+
+    <div id="topbar" class="hoc clear">
+
+        <div class="fl_left">
+            <!-- <li><i class="fa fa-phone"></i> (0472) 64-10-00</li>
+            <li><i class="fa fa-envelope-o"></i> public@csbc.edu.ua</li> -->
+              
+            <div class="langs">
+              <li>    
+                <img src="https://static-00.iconduck.com/assets.00/ukraine-emoji-2048x1480-8tcegxxe.png" style="width:30px; margin:3px 10px 0 5px; cursor:pointer">     
+              </li>	
+              <li>
+                <img src="https://flagpedia.net/data/flags/emoji/twitter/256x256/gb.png" style="width:30px; margin:3px 10px 0 5px; cursor:pointer"> 
+              </li>	
+            </div>
+
+            <div class="search-box">
+              <button class="btn-search"><i class="fa fa-search"></i></button>
+              <input type="text" class="input-search" placeholder="Пошук...">
+            </div>
+
+        </div>
+
+
+        <img class="logo" src="{{ url_for('static', filename='images/logo.png')}}">
+   
+          <div class="dropdown">
+
+            <div id="menu-button-box">
+              <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+
+               <div class="menu-box">
+                 <div class="menu-sign"><p>Меню</p></div>
+                 <div class="moodle-link"><a href="/">Головна</a></div>
+                 <div class="about-link"><a href="/about">Про нас</a></div>
+                 <div class="students-link"><a href="/students">Студ-рада</a></div>
+                 <div class="fornewcomers-link"><a target="_blank" href="http://csbc.edu.ua/documents/enrollee/obsyag18.pdf">Абітурієнтові</a></div>
+                 <div class="moodle-link"><a target="_blank" href="http://78.137.2.119:2929/">СДН moodle</a></div>
+                 <div class="socials">
+                     <li><a class="faicon-facebook" href="https://www.facebook.com/CHSBC2013/?__xts__[0]=68.ARAU78r73EGaniXz2WGXYFygYK0sBto-YDhFTbSguCTJf-AUXlaZv7ehQt48_MPzFwbXFIVVhX14A86fW0FEaK_23tgWt2HW7ir8_jbO8ZiyS-QLpIq-N0h3bHh7A83GRQw1wp3yakKmFT1mcZTnNZRxSUdZv_HNsoKCzbTZlSILUZc6alKkmWV5Lynz08-EAJ6v5J-iL_RFHD2jK1altnYMZ9yWJ7sPGhcIwAVZVEqHfS-b4NLYt-HFBG9n5eTtQjXFLkHZxK9rf9Qf2ghJFfsrUGoUIMk5h8WE0iVy3_Gvv6VmAv180QfyV1MuFYCTf1C7AwyPQ6tps8dq0ZO00tFeyS4G-0Lmocz7pfXnVzzkcfKx6PMZTcCt7iEAD_NKpcWrBdrN7rxovNj0l2OfCha6bC5_rnfrnBFIhR81KbacWw" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                     <li><a class="faicon-pinterest" href="https://www.instagram.com/stud.chsbc/?hl=ru&amp;fbclid=IwAR3j7BrE6kvzGL7w4vCkjjTwpSDA5JC_dVN5_9lqavZtH4V2fVlMEzjp20A" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                     <li><a class="faicon-dribble" href="https://www.youtube.com/channel/UCEpgZ7OwaEQdM5toM-AR7PA" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                     <li><a class="faicon-linkedin" href="mailto:public@csbc.edu.ua"><i class="fa fa-envelope"></i></a></li>
+                     <li><a class="faicon-linkedin" href="https://analytics.google.com/analytics/web/?hl=ru&amp;pli=1#embed/report-home/a84784907w126796913p130426676/" target="_blank"><i class="fa fa-bar-chart"></i></a></li>
+                  </div>
+               </div>
+          </div>
+          
+    </div>
+
+    <div class="wrapper">
+
+        <div class="carousel">
+      
+          <button type="button" id="carousel-arrow-prev" class="carousel-arrow carousel-arrow-prev" arial-label="Image précédente"></button>
+          <button type="button" id="carousel-arrow-next" class="carousel-arrow carousel-arrow-next" arial-label="Image suivante"></button>
+      
+          <img id="carousel-0" class="carousel-img carousel-img-displayed" src="{{ url_for('static', filename='images/10.jpg')}}" alt="Коледж" />
+          <img id="carousel-1" class="carousel-img carousel-img-noDisplay" src="{{ url_for('static', filename='images/5.jpg')}}" alt="Комп'ютерний кабінет" />
+          <img id="carousel-2" class="carousel-img carousel-img-noDisplay" src="{{ url_for('static', filename='images/12.jpg')}}" alt="Спортивний захід" />
+          <img id="carousel-3" class="carousel-img carousel-img-noDisplay" src="{{ url_for('static', filename='images/210324.jpg')}}" alt="Студенти" />
+          <img id="carousel-4" class="carousel-img carousel-img-noDisplay" src="{{ url_for('static', filename='images/2.jpg')}}" alt="Перший звоник" />
+      
+        </div>
+      
+    </div>
+
+    <div class="events-content">
+      <div class="news">
+        <h1>Новини</h1>
+          <div class="news1">
+            <img class="news1-img" src="{{ url_for('static', filename='images/2570_1.jpg')}}">
+              <div class="news1-text">
+                <h4>ВОЛОНТЕРИ ЧДБК ПРОВЕЛИ МАЙСТЕР-КЛАС ДЛЯ ДІТЕЙ З ОСОБЛИВИМИ ПОТРЕБАМИ!</h4>
+                <h6>&nbsp;&nbsp;&nbsp;&nbsp;<a><i class="fa fa-calendar"></i></a>&nbsp;&nbsp;2024-05-03 &nbsp;&nbsp;&nbsp;&nbsp;<a><i class="fa fa-eye" aria-hidden="true"></i></a>&nbsp;&nbsp;173</h6>
+                <p>02 травня волонтери ЧДБК на передодні Пасхи, організували майстер-клас для дітей з особливими потребами!
+
+                    Разом із мал...</p>
+                <a class="btn medium" href="fullnews.php?news=2570">Детальніше</a>
+              </div>
+        </div>
+
+        <div class="news2">
+          <img class="news2-img" src="{{ url_for('static', filename='images/2571_1.jpg')}}">
+            <div class="news2-text">
+              <h4>ЧДБК ПОСІВ 214 ПОЗИЦІЮ В РЕЙТИНГУ НАУКОВИХ УСТАНОВ УКРАЇНИ</h4>
+              <h6>&nbsp;&nbsp;&nbsp;&nbsp;<a><i class="fa fa-calendar"></i></a>&nbsp;&nbsp;2024-05-03 &nbsp;&nbsp;&nbsp;&nbsp;<a><i class="fa fa-eye" aria-hidden="true"></i></a>&nbsp;&nbsp;141</h6>
+              <p>В опублікованому рейтингу «Ukrainian National h-index Ranking 2024» Бізнес-коледж посів 214 позицію серед 446 наукових у...</p>
+              <a class="btn medium" href="fullnews.php?news=2570">Детальніше</a>
+            </div>
+        </div>
+
+      </div>
+
+      <div class="event-calendar">
+        <h1>Календар подій</h1>
+          <div class="calendar-wrap">
+
+            <div class="event-calendar1">
+              <img class="event-calendar1-img" src="{{ url_for('static', filename='images/01.jpg')}}">
+              <div class="event-calendar1-text">
+                <a><i class="fa fa-thumbs-o-up"></i></a>
+                    <a><i class="fa fa-calendar"></i></a>
+                    <a class="pull-right">2023-10-19</a>
+              </div>
+            </div>
+
+            <div class="event-calendar2">
+              <img class="event-calendar2-img" src="{{ url_for('static', filename='images/260224.jpg')}}">
+              <div class="event-calendar2-text">
+                <a><i class="fa fa-thumbs-o-up"></i></a>
+                    <a><i class="fa fa-calendar"></i></a>
+                    <a class="pull-right">2023-10-17</a>
+              </div>
+            </div>
+
+            <div class="event-calendar3">
+              <img class="event-calendar3-img" src="{{ url_for('static', filename='images/1526.jpg')}}">
+              <div class="event-calendar3-text">
+                <a><i class="fa fa-thumbs-o-up"></i></a>
+                    <a><i class="fa fa-calendar"></i></a>
+                    <a class="pull-right">2023-10-15</a>
+              </div>
+            </div>
+
+            <div class="event-calendar4">
+              <img class="event-calendar4-img" src="{{ url_for('static', filename='images/02.jpg')}}">
+              <div class="event-calendar4-text">
+                <a><i class="fa fa-thumbs-o-up"></i></a>
+                    <a><i class="fa fa-calendar"></i></a>
+                    <a class="pull-right">2023-10-12</a>
+              </div>
+            </div>
+
+          </div>
+      </div>
+    </div>
+
+    <footer>
+
+      <div class="adress-box">
+        <div class="one_quarter first" bis_skin_checked="1">
+          <h3 class="title">Адреса</h6>
+          <address class="btmspace-15">
+          18028 м. Черкаси,<br>
+          вул. В.Чорновола,  &amp; 243<br>
+          
+          </address>
+          <ul class="nospace">
+            <li class="btmspace-10"><span class="fa fa-phone"></span> (0472) 64-10-00</li>
+        <li class="btmspace-10"><span class="fa fa-phone"></span> (0472) 64-05-15</li>
+        <li class="btmspace-10"><span class="fa fa-phone"></span> (0472) 64-93-44</li>
+        <li class="btmspace-10"><span class="fa fa-fax"></span> (0472) 64-45-50</li>
+        <li class="btmspace-10">ПРИЙМАЛЬНА КОМІСІЯ</li>
+        <li class="btmspace-10"><span class="fa fa-phone"></span> +38(068)6410800</li>
+        <li class="btmspace-10"><span class="fa fa-phone"></span> +38(093)6410900</li>
+        <li class="btmspace-10"><span class="fa fa-phone"></span> (0472) 64-93-44</li>
+        <li class="btmspace-10"><span class="fa fa-phone"></span> (0472) 54-04-55</li>
+            <li><span class="fa fa-envelope-o"></span> public@csbc.edu.ua</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="links-box">
+        <div class="one_quarter" bis_skin_checked="1">
+          <h3 class="title">Посилання</h6>
+          <ul class="nospace linklist">
+        <li><a href="http://csbc.edu.ua/admin.php?about=10" target="_blank">ЗВІТ ДИРЕКТОРА </a></li>
+        <li><a href="https://docs.google.com/document/d/1ECAiaeYFGocP7ADl_ft7F00c3abTTuIFav8TTbq-OGY/edit?fbclid=IwAR0KP3RmRTwKlR4WXPE4_vSFwouMB5IqfNUxCuiu-vTscXWXBfit2TsKjIc" target="_blank">ПУБЛІЧНІ ЗАКУПІВЛІ</a></li>
+            <li><a href="finans.php?finans=1">Фінансова звітність</a></li>
+            <li><a href="finans.php?finans=2">Установчі документи</a></li>
+        <li><a href="finans.php?finans=4">Висновки експертної комісії</a></li>
+        <li><a href="documents/news/170423.pdf" "="">Відомості самооцінювання</a></li>
+        <li><a href="documents/news/agreement.pdf">КОЛЕКТИВНИЙ ДОГОВІР</a></li>
+          <!--  <li><a href="finans.php?finans=3">Тендери</a></li> -->
+          </ul>
+      
+      <a href="http://mycounter.ua/" target="_blank" onclick="this.href=my_stats_url" bis_size="{&quot;x&quot;:389,&quot;y&quot;:5289,&quot;w&quot;:88,&quot;h&quot;:16,&quot;abs_x&quot;:389,&quot;abs_y&quot;:5289}"><img src="https://get.mycounter.ua/counter.php?id=145038&amp;w=http%3A//www.business-college.com.ua/bk/index.php&amp;s=1680x1050x24&amp;r=http%3A//www.business-college.com.ua/&amp;c=1&amp;j=7&amp;f=21&amp;gmt=2&amp;dst=1" width="288" height="51" title="MyCounter - счётчик и статистика" alt="MyCounter - счётчик и статистика" border="0" bis_size="{&quot;x&quot;:389,&quot;y&quot;:5278,&quot;w&quot;:88,&quot;h&quot;:41,&quot;abs_x&quot;:389,&quot;abs_y&quot;:5278}" bis_id="bn_740t2x6axenkio6hucpwnq"></a>
+        </div>
+      </div>
+
+      <div class="map-box">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2596.077826960002!2d32.05373991569395!3d49.40743387934503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0xba464a0e8d80c83c!2z0KfQtdGA0LrQsNGB0YHQutC40Lkg0JHQuNC30L3QtdGBINCa0L7Qu9C70LXQtNC2!5e0!3m2!1sru!2sua!4v1452777426689" frameborder="0" style="border:0" width="100%" height="250px" allowfullscreen=""></iframe>
+      </div>
+
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+</body>
+</html>
