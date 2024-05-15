@@ -6,11 +6,9 @@ document.getElementById('carousel-arrow-prev').addEventListener('click',carousel
  */
 function carouselSwipe() {
 	
-    // Récupère les numéros de l'ancienne et la nouvelle image
     var currentImg = document.getElementsByClassName('carousel-img-displayed')[0].id.substring(9);
 	var newImg = parseInt(currentImg);
     
-    // Gestion du début et de la fin de la liste d'images
 	if (this.id == 'carousel-arrow-next') {
         newImg++;
         if (newImg >= document.getElementsByClassName('carousel-img').length) {
@@ -23,19 +21,36 @@ function carouselSwipe() {
         }
     }
     
-	// Disparition progressive de l'ancienne image
     document.getElementById('carousel-'+currentImg).className = 'carousel-img carousel-img-hidden';
 	
-    // Apparition progressive de la nouvelle image
     var displayedCarousel = document.getElementById('carousel-'+newImg);
 	displayedCarousel.className = 'carousel-img carousel-img-hidden';
 	setTimeout(function() {
 		displayedCarousel.className = 'carousel-img carousel-img-displayed';
 	},20);
     
-    // Disparition totale de l'ancienne image
 	setTimeout(function() {
 		document.getElementById('carousel-'+currentImg).className = 'carousel-img carousel-img-noDisplay';
 	},520);
     
+}
+
+function thumb1() {
+    var element = document.querySelector("#thumb1-i");
+    element.classList.replace("fa-thumbs-o-up", "fa-thumbs-up");
+}
+
+function thumb2() {
+    var element = document.querySelector("#thumb2-i");
+    element.classList.replace("fa-thumbs-o-up", "fa-thumbs-up");
+}
+
+function thumb3() {
+    var element = document.querySelector("#thumb3-i");
+    element.classList.replace("fa-thumbs-o-up", "fa-thumbs-up");
+}
+
+function thumb4() {
+    var element = document.querySelector("#thumb4-i");
+    element.classList.replace("fa-thumbs-o-up", "fa-thumbs-up");
 }

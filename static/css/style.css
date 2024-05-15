@@ -249,6 +249,10 @@ header {
   flex-direction: column;
 }
 
+.twitter-share-button {
+  margin: 10px;
+}
+
 h4 {
   font-size: 24px;
 }
@@ -326,4 +330,8 @@ footer {
 .linklist > li > a {
   text-decoration: none;
   color: #7aafff;
+}
+
+#thumb1-i , #thumb2-i , #thumb3-i , #thumb4-i {
+  cursor: pointer;
 }
