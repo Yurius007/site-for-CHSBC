@@ -3,12 +3,12 @@
     <!-- <h1>Read the Docs</h1> -->
     <img src="../../public/logo.png" alt="">
     <ul>
-      <li><a href="index.html">Головна</a></li>
-      <li><a>Про нас</a></li>
-      <li><a>Абітурієнту</a></li>
-      <li><a>Студенетові</a></li>
-      <li><a>Викладачу</a></li>
-      <li><a>Конференції</a></li>
+      <li><a href="/">Головна</a></li>
+      <li><a href="about">Про нас</a></li>
+      <li><a href="http://csbc.edu.ua/documents/enrollee/obsyag18.pdf">Абітурієнту</a></li>
+      <li><a href="http://csbc.edu.ua/student.php?student=7">Студенетові</a></li>
+      <li><a href="http://csbc.edu.ua/teacher.php?teacher=2">Викладачу</a></li>
+      <li><a href="studrada">Студрада</a></li>
     </ul>
   </header>
 </template>

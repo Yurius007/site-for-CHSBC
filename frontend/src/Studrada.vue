@@ -52,7 +52,7 @@ input, textarea {
     font-size: 18px;
     font-weight: 600;
     font-family: inherit;
-    color: rgba(1, 1, 1, 0.84);
+    color: rgba(0, 0, 0, 0.84);
     
 }
 

@@ -118,6 +118,7 @@ export default {
 
 .service:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .news-list {

@@ -9,7 +9,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
           index: resolve(__dirname, 'index.html'),
-          studrada: resolve(__dirname, 'studrada.html')
+          studrada: resolve(__dirname, 'studrada.html'),
+          about: resolve(__dirname, 'about.html'),
       }
     }
   }
